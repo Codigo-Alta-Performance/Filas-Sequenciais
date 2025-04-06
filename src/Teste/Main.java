@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Quantidade de elementas na fila: ");
+        System.out.println("Quantidade de elementos na fila: ");
         int n = sc.nextInt();
         int fim = 0;
         for(int i = 0; i < 10; i++) {
