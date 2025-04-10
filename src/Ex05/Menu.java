@@ -26,6 +26,11 @@ public class Menu {
                         System.out.println("A fila está vazia!");
                     }
                     break;
+                case 3:
+                    if (!filaPaciente.isEmpty()) {
+                        System.out.println("Ainda há pacientes na fila!");
+                        op = 0;
+                    }
             }
         } while (op != 3);
         System.out.println("Atendimento finalizado! Muito obrigado.");

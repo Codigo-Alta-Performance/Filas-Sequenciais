@@ -1,7 +1,7 @@
 package Ex03;
 
-import static javax.swing.JOptionPane.*;
 import static java.lang.Integer.parseInt;
+import static javax.swing.JOptionPane.*;
 
 public class Util {
     private FilaAluno filaAluno = new FilaAluno();
@@ -24,6 +24,14 @@ public class Util {
                     break;
                 case 3:
                     exibirAlunos();
+                    break;
+                case 4:
+                    if (!filaAluno.isEmpty()) {
+                        showMessageDialog(null, "Ainda há alunos na fila!");
+                        op = 0;
+                    } else {
+                        showMessageDialog(null, "Atendimento finalizado!");
+                    }
                     break;
             }
         } while (op != 4);
@@ -51,7 +59,7 @@ public class Util {
 
     public void exibirAlunos() {
         String aux = "";
-        for(int i = filaAluno.ini; i < filaAluno.cont; i++) {
+        for(int i = filaAluno.ini; i < (filaAluno.ini + filaAluno.cont); i = (i + 1) % filaAluno.N) {
             aux += "\nNome: " + filaAluno.dados[i].getNome();
             aux += "\nRM: " + filaAluno.dados[i].getRm();
             aux += "\nCurso: " + filaAluno.dados[i].getCurso() + "\n";

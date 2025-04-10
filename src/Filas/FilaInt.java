@@ -3,7 +3,7 @@ package Filas;
 public class FilaInt {
     public final int N = 3;
     int[] dados = new int [N];
-    int ini, fim, cont;
+    public int ini, fim, cont;
 
     public void init() {
         ini = 0;
